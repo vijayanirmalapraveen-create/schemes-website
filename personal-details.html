@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Details | SchemeFinder AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="personal-details">
+  <nav class="navbar">
+    <div class="container nav-content">
+      <div class="logo">
+        <span class="logo-icon">🇮🇳</span>
+        <span class="logo-text">Scheme<span class="accent">Finder</span> AI</span>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="business-profile.html">Next Page</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="finder-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="step-indicator">Step 1 of 3</span>
+        <h2>Tell us about yourself</h2>
+        <p>Fill in a few details to start matching the right schemes.</p>
+      </div>
+
+      <div class="finder-card">
+        <form id="personalForm" onsubmit="return false;">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" placeholder="e.g. Ravi Kumar" required />
+            </div>
+
+            <div class="form-group">
+              <label for="age">Age</label>
+              <input type="number" id="age" min="18" max="70" placeholder="25" required />
+            </div>
+
+            <div class="form-group">
+              <label for="gender">Gender</label>
+              <select id="gender" required>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="category">Social Category</label>
+              <select id="category" required>
+                <option value="">Select</option>
+                <option value="general">General</option>
+                <option value="obc">OBC</option>
+                <option value="sc">SC</option>
+                <option value="st">ST</option>
+                <option value="minority">Minority</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="state">State</label>
+              <select id="state" required>
+                <option value="">Select State</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="West Bengal">West Bengal</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Assam">Assam</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="area">Area Type</label>
+              <select id="area" required>
+                <option value="">Select</option>
+                <option value="rural">Rural</option>
+                <option value="urban">Urban</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="page-actions">
+            <a class="btn-secondary btn-lg" href="index.html">Back</a>
+            <button type="button" class="btn-primary btn-lg" onclick="goToBusinessProfile()">Continue</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script src="schemes-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

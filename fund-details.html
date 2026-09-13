@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Funding Details | SchemeFinder AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="fund-details">
+  <nav class="navbar">
+    <div class="container nav-content">
+      <div class="logo">
+        <span class="logo-icon">🇮🇳</span>
+        <span class="logo-text">Scheme<span class="accent">Finder</span> AI</span>
+      </div>
+      <div class="nav-links">
+        <a href="business-profile.html">Back</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="finder-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="step-indicator">Step 3 of 3</span>
+        <h2>Funding needs</h2>
+        <p>Share your loan requirement and business purpose to get the best matches.</p>
+      </div>
+
+      <div class="finder-card">
+        <form id="fundForm" onsubmit="return false;">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="loanAmount">Loan / Support Required (₹)</label>
+              <input type="number" id="loanAmount" min="10000" max="50000000" step="10000" placeholder="e.g. 700000" required />
+              <small class="hint">Enter amount in rupees (e.g. 700000 for ₹7 lakh)</small>
+            </div>
+
+            <div class="form-group">
+              <label for="purpose">Purpose of Fund</label>
+              <select id="purpose" required>
+                <option value="">Select</option>
+                <option value="setup">Setting up new unit</option>
+                <option value="machinery">Machinery / Equipment</option>
+                <option value="working">Working Capital</option>
+                <option value="expansion">Business Expansion</option>
+                <option value="tech">Technology Upgradation</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="page-actions">
+            <a class="btn-secondary btn-lg" href="business-profile.html">Back</a>
+            <button type="button" class="btn-primary btn-lg" id="findBtn" onclick="findSchemes()">
+              <span class="btn-text">Find Best Schemes</span>
+              <span class="btn-loader" style="display:none;">Analyzing...</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div id="results" class="results-section" style="display:none;">
+    <div class="container">
+      <div class="section-header">
+        <h2>Recommended Schemes for <span id="userNameDisplay">You</span></h2>
+        <p id="resultsSummary"></p>
+      </div>
+      <div id="resultsContainer" class="results-grid"></div>
+      <div class="results-note">
+        <strong>Note:</strong> This is an AI-assisted recommendation based on publicly available scheme guidelines (2026). 
+        Final eligibility is decided by the implementing bank / agency. Always verify on the official portal before applying.
+      </div>
+    </div>
+  </div>
+
+  <script src="schemes-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

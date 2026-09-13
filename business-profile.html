@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Profile | SchemeFinder AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="business-profile">
+  <nav class="navbar">
+    <div class="container nav-content">
+      <div class="logo">
+        <span class="logo-icon">🇮🇳</span>
+        <span class="logo-text">Scheme<span class="accent">Finder</span> AI</span>
+      </div>
+      <div class="nav-links">
+        <a href="personal-details.html">Back</a>
+        <a href="fund-details.html">Next Page</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="finder-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="step-indicator">Step 2 of 3</span>
+        <h2>Your business profile</h2>
+        <p>Tell us what kind of business you are running or planning.</p>
+      </div>
+
+      <div class="finder-card">
+        <form id="businessForm" onsubmit="return false;">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="businessType">Business Type</label>
+              <select id="businessType" required>
+                <option value="">Select</option>
+                <option value="manufacturing">Manufacturing</option>
+                <option value="service">Service</option>
+                <option value="trading">Trading / Retail</option>
+                <option value="artisan">Traditional Artisan / Craft</option>
+                <option value="food">Food Processing</option>
+                <option value="agri">Agri-Allied</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="businessStage">Business Stage</label>
+              <select id="businessStage" required>
+                <option value="">Select</option>
+                <option value="new">New / Greenfield (starting now)</option>
+                <option value="existing">Existing business</option>
+                <option value="expansion">Expansion / Upgradation</option>
+              </select>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="income">Annual Family Income (₹)</label>
+              <select id="income" required>
+                <option value="">Select</option>
+                <option value="below3">Below ₹3 lakh</option>
+                <option value="3to5">₹3 – 5 lakh</option>
+                <option value="5to10">₹5 – 10 lakh</option>
+                <option value="above10">Above ₹10 lakh</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="page-actions">
+            <a class="btn-secondary btn-lg" href="personal-details.html">Back</a>
+            <button type="button" class="btn-primary btn-lg" onclick="goToFundDetails()">Continue</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script src="schemes-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

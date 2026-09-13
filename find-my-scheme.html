@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find My Scheme | SchemeFinder AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="find-my-scheme">
+  <nav class="navbar">
+    <div class="container nav-content">
+      <div class="logo">
+        <span class="logo-icon">🇮🇳</span>
+        <span class="logo-text">Scheme<span class="accent">Finder</span> AI</span>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="find-my-scheme.html">Find My Scheme</a>
+        <a href="schemes.html">Schemes</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="finder-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Find My Scheme</h2>
+        <p>Fill in your details and we will recommend the best matching schemes.</p>
+      </div>
+
+      <div class="finder-card">
+        <form id="schemeForm" onsubmit="return false;">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" placeholder="e.g. Ravi Kumar" required />
+            </div>
+
+            <div class="form-group">
+              <label for="age">Age</label>
+              <input type="number" id="age" min="18" max="70" placeholder="25" required />
+            </div>
+
+            <div class="form-group">
+              <label for="gender">Gender</label>
+              <select id="gender" required>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="category">Social Category</label>
+              <select id="category" required>
+                <option value="">Select</option>
+                <option value="general">General</option>
+                <option value="obc">OBC</option>
+                <option value="sc">SC</option>
+                <option value="st">ST</option>
+                <option value="minority">Minority</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="state">State</label>
+              <select id="state" required>
+                <option value="">Select State</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="West Bengal">West Bengal</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Assam">Assam</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="area">Area Type</label>
+              <select id="area" required>
+                <option value="">Select</option>
+                <option value="rural">Rural</option>
+                <option value="urban">Urban</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="businessType">Business Type</label>
+              <select id="businessType" required>
+                <option value="">Select</option>
+                <option value="manufacturing">Manufacturing</option>
+                <option value="service">Service</option>
+                <option value="trading">Trading / Retail</option>
+                <option value="artisan">Traditional Artisan / Craft</option>
+                <option value="food">Food Processing</option>
+                <option value="agri">Agri-Allied</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="businessStage">Business Stage</label>
+              <select id="businessStage" required>
+                <option value="">Select</option>
+                <option value="new">New / Greenfield (starting now)</option>
+                <option value="existing">Existing business</option>
+                <option value="expansion">Expansion / Upgradation</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="loanAmount">Loan / Support Required (₹)</label>
+              <input type="number" id="loanAmount" min="10000" max="50000000" step="10000" placeholder="e.g. 700000" required />
+              <small class="hint">Enter amount in rupees (e.g. 700000 for ₹7 lakh)</small>
+            </div>
+
+            <div class="form-group">
+              <label for="income">Annual Family Income (₹)</label>
+              <select id="income" required>
+                <option value="">Select</option>
+                <option value="below3">Below ₹3 lakh</option>
+                <option value="3to5">₹3 – 5 lakh</option>
+                <option value="5to10">₹5 – 10 lakh</option>
+                <option value="above10">Above ₹10 lakh</option>
+              </select>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="purpose">Purpose of Fund</label>
+              <select id="purpose" required>
+                <option value="">Select</option>
+                <option value="setup">Setting up new unit</option>
+                <option value="machinery">Machinery / Equipment</option>
+                <option value="working">Working Capital</option>
+                <option value="expansion">Business Expansion</option>
+                <option value="tech">Technology Upgradation</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn-primary btn-lg" id="findBtn" onclick="findSchemes()">
+              <span class="btn-text">Find Best Schemes</span>
+              <span class="btn-loader" style="display:none;">Analyzing...</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="results" class="results-section" style="display:none;">
+    <div class="container">
+      <div class="section-header">
+        <h2>Recommended Schemes for <span id="userNameDisplay">You</span></h2>
+        <p id="resultsSummary"></p>
+      </div>
+      <div id="resultsContainer" class="results-grid"></div>
+      <div class="results-note">
+        <strong>Note:</strong> This is an AI-assisted recommendation based on publicly available scheme guidelines (2026). Final eligibility is decided by the implementing bank / agency. Always verify on the official portal before applying.
+      </div>
+    </div>
+  </section>
+
+  <script src="schemes-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
